@@ -73,8 +73,8 @@ const options = {
     },
     servers: [
       {
-        // url: "https://abusing-scripts.vercel.app",
-        url: "http://localhost:3000",
+        url: "https://express-app-with-swagger.vercel.app",
+        // url: "http://localhost:3000",
       },
     ],
   },
@@ -93,7 +93,8 @@ app.use(
 );
 
 app.get("/", (req, res, next) => {
-  res.redirect("http://localhost:3000/api-docs");
+  // res.redirect("http://localhost:3000/api-docs");
+  res.redirect("https://express-app-with-swagger.vercel.app/api-docs");
 });
 
 app.get("/api/heros", (req, res, next) => {
