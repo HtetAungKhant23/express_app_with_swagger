@@ -73,7 +73,7 @@ const options = {
     },
     servers: [
       {
-        url: "https://express-app-with-swagger.vercel.app",
+        url: "https://expressappwithswagger-production.up.railway.app",
         // url: "http://localhost:3000",
       },
     ],
@@ -94,7 +94,9 @@ app.use(
 
 app.get("/", (req, res, next) => {
   // res.redirect("http://localhost:3000/api-docs");
-  res.redirect("https://express-app-with-swagger.vercel.app/api-docs");
+  res.redirect(
+    "https://expressappwithswagger-production.up.railway.app/api-docs"
+  );
 });
 
 app.get("/api/heros", (req, res, next) => {
