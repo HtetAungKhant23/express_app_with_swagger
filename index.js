@@ -88,7 +88,7 @@ const options = {
     ],
   },
   // This is to call all the file
-  apis: ["./routes*.js"],
+  apis: ["**/*.js"],
 };
 
 const specs = swaggerJsDoc(options);
