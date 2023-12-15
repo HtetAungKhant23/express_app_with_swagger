@@ -60,6 +60,8 @@ const data = [
   },
 ];
 
+const url = "https://express-app-with-swagger.vercel.app";
+
 const app = express();
 app.use(express.json());
 
@@ -73,7 +75,7 @@ const options = {
     },
     servers: [
       {
-        url: "https://expressappwithswagger-production.up.railway.app",
+        url,
         // url: "http://localhost:3000",
       },
     ],
@@ -86,19 +88,17 @@ const specs = swaggerJsdoc(options);
 const CSS_URL =
   "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/5.0.0/swagger-ui.min.css";
 
-// app.use(
-//   "/api-docs",
-//   swaggerUi.serve,
-//   swaggerUi.setup(specs, { customCssUrl: CSS_URL })
-// );
+app.use(
+  "/api-docs",
+  swaggerUi.serve,
+  swaggerUi.setup(specs, { customCssUrl: CSS_URL })
+);
 
 app.get("/", (req, res, next) => {
-  // res.redirect("http://localhost:3000/api-docs");
-  // res.redirect(
-  //   "https://expressappwithswagger-production.up.railway.app/api-docs"
-  // );
   console.log("please");
-  res.send("Hay");
+
+  // res.redirect("http://localhost:3000/api-docs");
+  res.redirect(`${url}/api-docs`);
 });
 
 app.get("/api/heros", (req, res, next) => {
