@@ -86,21 +86,23 @@ const specs = swaggerJsdoc(options);
 const CSS_URL =
   "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/5.0.0/swagger-ui.min.css";
 
-app.use(
-  "/api-docs",
-  swaggerUi.serve,
-  swaggerUi.setup(specs, { customCssUrl: CSS_URL })
-);
+// app.use(
+//   "/api-docs",
+//   swaggerUi.serve,
+//   swaggerUi.setup(specs, { customCssUrl: CSS_URL })
+// );
 
 app.get("/", (req, res, next) => {
   // res.redirect("http://localhost:3000/api-docs");
   // res.redirect(
   //   "https://expressappwithswagger-production.up.railway.app/api-docs"
   // );
+  console.log("please");
   res.send("Hay");
 });
 
 app.get("/api/heros", (req, res, next) => {
+  console.log("work");
   res.send(data);
 });
 
