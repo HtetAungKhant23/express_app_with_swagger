@@ -109,22 +109,22 @@ app.get("/", (req, res, next) => {
   res.redirect(`${url}/api-docs`);
 });
 
-/**
- * @swagger
- * /api/heros:
- *   get:
- *     summary: Lists all the heros
- *     tags: [Heros]
- *     responses:
- *       200:
- *         description: The list of the heros
- *         content:
- *           application/json:
- *             schema:
- *               type: array
- *               items:
- *                 $ref: '#/components/schemas/Heros'
- */
+// /**
+//  * @swagger
+//  * /api/heros:
+//  *   get:
+//  *     summary: Lists all the heros
+//  *     tags: [Heros]
+//  *     responses:
+//  *       200:
+//  *         description: The list of the heros
+//  *         content:
+//  *           application/json:
+//  *             schema:
+//  *               type: array
+//  *               items:
+//  *                 $ref: '#/components/schemas/Heros'
+//  */
 
 app.get("/api/heros", (req, res, next) => {
   console.log("work");
