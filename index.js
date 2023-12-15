@@ -94,9 +94,10 @@ app.use(
 
 app.get("/", (req, res, next) => {
   // res.redirect("http://localhost:3000/api-docs");
-  res.redirect(
-    "https://expressappwithswagger-production.up.railway.app/api-docs"
-  );
+  // res.redirect(
+  //   "https://expressappwithswagger-production.up.railway.app/api-docs"
+  // );
+  res.send("Hay");
 });
 
 app.get("/api/heros", (req, res, next) => {
