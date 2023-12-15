@@ -60,8 +60,8 @@ const data = [
   },
 ];
 
-const url = "https://express-app-with-swagger.vercel.app";
-// const url = "http://localhost:2000";
+// const url = "https://express-app-with-swagger.vercel.app";
+const url = "http://localhost:2000";
 
 const app = express();
 app.use(express.json());
