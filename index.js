@@ -80,7 +80,7 @@ const options = {
       },
     ],
   },
-  apis: ["*.js"],
+  apis: ["src/**/*.js"],
 };
 
 const specs = swaggerJsdoc(options);
